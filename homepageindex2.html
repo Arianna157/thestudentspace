@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Homepage</title>
+<style>
+    #modeChanger {transition-duration: 0.5s; padding: 10px 20px; text-align: center; display: inline-block; border-radius: 10px;}
+    #modeChanger {color: white; background-color: black;}
+    #modeChanger:hover {color:black; background-color: white;}
+    body {text-align: center;}
+    #starPic {display: none;}
+    
+</style>
+</head>
+<body>
+
+    <div id="mainPage">
+    <h1>name...</h1>
+    <img src="starbackground.jpg" id="starPic" width="75%">
+    <img src="sunrisewater.jpg" id="sunPic" width="75%">
+<br>
+    <button id = "modeChanger"; onclick="theme()">Change mode</button>
+</div>
+
+
+
+    <script>
+        var mode = "light";
+function theme() {
+    if ( mode == "light") {
+         mode = "dark";
+        document.querySelector("body").style.color = "white";
+        document.querySelector("body").style.backgroundColor = "black";
+        document.querySelector("#starPic").style.display = "block";
+        document.querySelector("#sunPic").style.display = "none";
+    }
+    else{
+        mode = "light";
+        document.querySelector("body").style.color ="black";
+        document.querySelector("body").style.backgroundColor = "white";
+        document.querySelector("#starPic").style.display = "none";
+        document.querySelector("#sunPic").style.display = "block";
+
+    }
+
+}
+
+    </script>
+</body>
+</html>

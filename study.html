@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Study</title>
+</head>
+<body>
+   <h1>Study</h1> 
+
+   <div id="toDoList">
+    <h3>Todo list</h3>
+    <input id="newTask">
+    <button id="addTask" onclick="addTask()">Add a task</button>
+    <br>
+   </div>
+
+<script>
+    function addTask() {
+        const newTask = document.getElementById("newTask").value;
+        const para = document.createElement("p");
+        
+
+
+        const node = document.createTextNode(newTask);
+    para.appendChild(node);
+    const checkbox = document.createElement("input");
+    checkbox.setAttribute("type", "checkbox");
+    
+    const element = document.getElementById("toDoList");
+    element.appendChild(para);
+    element.appendChild(checkbox);
+    };
+
+</script>
+
+</body>
+</html>
